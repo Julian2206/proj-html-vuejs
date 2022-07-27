@@ -10,38 +10,43 @@ import Header from "./components/Header.vue";
 /* import Footer from "./components/Footer.vue.vue" */
 
 export default {
-  data() {
+  data: function () {
     return {
       headerLinks: [
         {
           text: "Home",
-          images: "./assets/images/home.png",
+          images: require("./assets/home.png"),
         },
         {
           text: "Pages",
-          images: "./assets/images/document.png",
+          images: require("./assets/document.png"),
         },
         {
           text: "Blog",
-          images: "./assets/images/home.png",
+          images: require("./assets/printer.png"),
         },
         {
           text: "Shop",
-          images: "./assets/images/home.png",
+          images: require("./assets/cart.png"),
         },
         {
           text: "Shortcode",
-          images: "./assets/images/home.png",
+          images: require("./assets/lab.png"),
         },
         {
           text: "Support",
-          images: "./assets/images/home.png",
+          images: require("./assets/chat.png"),
         },
         {
           text: "Contact",
-          images: "./assets/images/home.png",
+          images: require("./assets/envelope.png"),
         },
       ],
+      /* headerSlides: [
+        "./assets/images/slider_slide1_background.png",
+        "./assets/images/slider_slide1_background.png",
+        "./assets/images/slider_slide1_background.png",
+      ], */
     };
   },
   name: "App",

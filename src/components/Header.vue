@@ -3,14 +3,18 @@
     <div class="container">
       <div class="navbar">
         <div class="logo">
-          <img src="../assets/images/logo.png" alt="" />
+          <img src="../assets/images/logo.png" alt="logo" />
         </div>
         <div>
           <ul>
-            <li v-for="headerLink in headerLinks" v-bind:key="headerLink.id">
-              <img class="navLinks" :src="headerLink.images" />
+            <a
+              href="#"
+              v-for="headerLink in headerLinks"
+              v-bind:key="headerLink.id"
+            >
+              <img class="navLinksImages" v-bind:src="headerLink.images" />
               {{ headerLink.text }}
-            </li>
+            </a>
           </ul>
         </div>
       </div>
@@ -23,7 +27,6 @@ export default {
   name: "Header",
   props: {
     headerLinks: Array,
-    images: Object,
   },
 };
 </script>
@@ -33,11 +36,14 @@ export default {
   width: 100%;
   height: 250px;
   background-color: #fefffe;
+  /* background-color: aqua; */
 }
 
 .logo img {
   width: 160px;
   height: 120px;
+  margin-top: 40px;
+  margin-left: 30px;
 }
 
 .navbar {
@@ -55,8 +61,9 @@ export default {
   margin-top: 40px;
 }
 
-.navbar ul li {
+.navbar ul a {
   width: 60px;
   padding: 80px;
+  text-decoration: none;
 }
 </style>
