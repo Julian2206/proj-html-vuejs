@@ -1,28 +1,60 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header :headerLinks="headerLinks" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from "./components/Header.vue";
+/* import Main from "./components/Main.vue.vue" */
+/* import Footer from "./components/Footer.vue.vue" */
 
 export default {
-  name: 'App',
+  data() {
+    return {
+      headerLinks: [
+        {
+          text: "Home",
+          images: "./assets/images/home.png",
+        },
+        {
+          text: "Pages",
+          images: "./assets/images/document.png",
+        },
+        {
+          text: "Blog",
+          images: "./assets/images/home.png",
+        },
+        {
+          text: "Shop",
+          images: "./assets/images/home.png",
+        },
+        {
+          text: "Shortcode",
+          images: "./assets/images/home.png",
+        },
+        {
+          text: "Support",
+          images: "./assets/images/home.png",
+        },
+        {
+          text: "Contact",
+          images: "./assets/images/home.png",
+        },
+      ],
+    };
+  },
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Header,
+  },
+};
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 </style>
