@@ -1,11 +1,16 @@
 <template>
-  <div class="carousel">
-    <slot></slot>
+  <section>
+    <div class="carousel">
+      <slot></slot>
 
-    <button @click="next" class="next">Next</button>
-    <button @click="prev" class="prev">Prev</button>
-    <div class=""></div>
-  </div>
+      <button @click="next" class="next">Next</button>
+      <button @click="prev" class="prev">Prev</button>
+    </div>
+    <div class="headerInfo">
+      <h2>How to Enroll Your Child to a Class?</h2>
+      <button>Learn More</button>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -31,7 +36,7 @@ export default {
   height: 650px;
   overflow: hidden;
 }
-button {
+.carousel button {
   position: absolute;
   height: 40px;
   width: 50px;
@@ -40,8 +45,8 @@ button {
   border: none;
   color: #fff;
 }
-button:focus,
-button:hover {
+.carousel button:focus-visible,
+.carousel button:hover {
   /* outline: none; */
   cursor: pointer;
 }
@@ -50,5 +55,30 @@ button:hover {
 }
 .prev {
   left: 0;
+}
+
+.headerInfo {
+  background-image: url("../assets/images/pattern.png");
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+}
+.headerInfo h2 {
+  color: #fff;
+  font-size: 30px;
+}
+.headerInfo button {
+  height: 40px;
+  width: 100px;
+  font-size: 14px;
+  background-color: #554e9e;
+  color: #fff;
+  border: 1px solid #fff;
+}
+.headerInfo button:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: black;
 }
 </style>

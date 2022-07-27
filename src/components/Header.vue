@@ -34,7 +34,7 @@ export default {
 <style lang="scss">
 .header {
   width: 100%;
-  height: 250px;
+  height: 200px;
   background-color: #fefffe;
   /* background-color: aqua; */
 }
@@ -48,7 +48,7 @@ export default {
 
 .navbar {
   width: 100%;
-  height: 200px;
+  height: 150px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -65,5 +65,9 @@ export default {
   width: 60px;
   padding: 80px;
   text-decoration: none;
+}
+
+.navbar ul a:hover {
+  background-color: #fe6601;
 }
 </style>

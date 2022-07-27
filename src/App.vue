@@ -11,6 +11,7 @@
         <img class="sliderImages" :src="slide" />
       </carousel-slide>
     </carousel>
+    <Main :mainInfos="mainInfos" />
   </div>
 </template>
 
@@ -18,7 +19,7 @@
 import Header from "./components/Header.vue";
 import Carousel from "./components/Carousel.vue";
 import CarouselSlide from "./components/CarouselSlide.vue";
-/* import Main from "./components/Main.vue.vue" */
+import Main from "./components/Main.vue";
 /* import Footer from "./components/Footer.vue.vue" */
 
 export default {
@@ -60,6 +61,29 @@ export default {
         require("./assets/images/slider_slide3_background.png"),
       ],
       visibleSlide: 0,
+
+      mainInfos: [
+        {
+          images: require("./assets/images/schoolbag_alt.png"),
+          title: "Morbi Etos",
+          text: "Praesent interdum est gravida vehicula est node maecenas loareet morbi a dosis luctus novum est praesent.",
+        },
+        {
+          images: require("./assets/images/bell_alt.png"),
+          title: "Morbi Etos",
+          text: "Praesent interdum est gravida vehicula est node maecenas loareet morbi a dosis luctus novum est praesent.",
+        },
+        {
+          images: require("./assets/images/bell_alt.png"),
+          title: "Morbi Etos",
+          text: "Praesent interdum est gravida vehicula est node maecenas loareet morbi a dosis luctus novum est praesent.",
+        },
+        {
+          images: require("./assets/images/bell_alt.png"),
+          title: "Morbi Etos",
+          text: "Praesent interdum est gravida vehicula est node maecenas loareet morbi a dosis luctus novum est praesent.",
+        },
+      ],
     };
   },
   computed: {
@@ -88,6 +112,7 @@ export default {
     Header,
     Carousel,
     CarouselSlide,
+    Main,
   },
 };
 </script>
