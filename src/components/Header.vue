@@ -34,13 +34,12 @@ export default {
 <style lang="scss">
 .header {
   width: 100%;
-  height: 200px;
+  height: 180px;
   background-color: #fefffe;
-  /* background-color: aqua; */
 }
 
 .logo img {
-  width: 160px;
+  width: 180px;
   height: 120px;
   margin-top: 40px;
   margin-left: 30px;
@@ -63,7 +62,11 @@ export default {
 
 .navbar ul a {
   width: 60px;
-  padding: 80px;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
 }
 

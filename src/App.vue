@@ -12,6 +12,7 @@
       </carousel-slide>
     </carousel>
     <Main :mainInfos="mainInfos" />
+    <OurClass :cards="cards" />
   </div>
 </template>
 
@@ -20,6 +21,7 @@ import Header from "./components/Header.vue";
 import Carousel from "./components/Carousel.vue";
 import CarouselSlide from "./components/CarouselSlide.vue";
 import Main from "./components/Main.vue";
+import OurClass from "./components/OurClass.vue";
 /* import Footer from "./components/Footer.vue.vue" */
 
 export default {
@@ -67,21 +69,63 @@ export default {
           images: require("./assets/images/schoolbag_alt.png"),
           title: "Morbi Etos",
           text: "Praesent interdum est gravida vehicula est node maecenas loareet morbi a dosis luctus novum est praesent.",
+          total: 507,
+          subject: "Our Pupils",
+          description:
+            "Praesent interdum est gravida vehicula est node maecenas loareet morbi a dosis luctus novum est praesent.",
+        },
+        {
+          images: require("./assets/images/stroller_alt.png"),
+          title: "Congue Gravida",
+          text: "Praesent interdum est gravida vehicula est node maecenas loareet morbi a dosis luctus novum est praesent.",
+          total: 235,
+          subject: "Teaching Hours",
+          description:
+            "Praesent interdum est gravida vehicula est node maecenas loareet morbi a dosis luctus novum est praesent.",
+        },
+        {
+          images: require("./assets/images/globe_alt.png"),
+          title: "Maecenas Node",
+          text: "Praesent interdum est gravida vehicula est node maecenas loareet morbi a dosis luctus novum est praesent.",
+          total: "100%",
+          subject: "Satisfied Parents",
+          description:
+            "Praesent interdum est gravida vehicula est node maecenas loareet morbi a dosis luctus novum est praesent.",
         },
         {
           images: require("./assets/images/bell_alt.png"),
-          title: "Morbi Etos",
+          title: "Praesent Morbi",
           text: "Praesent interdum est gravida vehicula est node maecenas loareet morbi a dosis luctus novum est praesent.",
+          total: 1050,
+          subject: "Meals Per Year",
+          description:
+            "Praesent interdum est gravida vehicula est node maecenas loareet morbi a dosis luctus novum est praesent.",
+        },
+      ],
+      cards: [
+        {
+          name: "Little Lambs",
+          age: "12-24",
+          size: "9",
+          images: require("./assets/images/class_01-690x506.jpg"),
         },
         {
-          images: require("./assets/images/bell_alt.png"),
-          title: "Morbi Etos",
-          text: "Praesent interdum est gravida vehicula est node maecenas loareet morbi a dosis luctus novum est praesent.",
+          name: "Bouncy Bears",
+          age: "2-3",
+          size: "12",
+          images: require("./assets/images/class_01-690x506.jpg"),
         },
         {
-          images: require("./assets/images/bell_alt.png"),
-          title: "Morbi Etos",
-          text: "Praesent interdum est gravida vehicula est node maecenas loareet morbi a dosis luctus novum est praesent.",
+          name: "Tenderhearts",
+          age: "3-4",
+          size: "15",
+          images: require("./assets/images/class_01-690x506.jpg"),
+        },
+        {
+          name: "Shining Stars",
+          age: "4-5",
+          size: "20",
+          images: require("./assets/images/class_01-690x506.jpg"),
         },
       ],
     };
@@ -113,6 +157,7 @@ export default {
     Carousel,
     CarouselSlide,
     Main,
+    OurClass,
   },
 };
 </script>
