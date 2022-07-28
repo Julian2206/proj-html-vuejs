@@ -242,7 +242,7 @@ export default {
   overflow: hidden;
 }
 
-.gallery-container > div {
+.gallery-container div > img {
   width: 100%;
   height: auto;
 }

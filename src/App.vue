@@ -13,6 +13,7 @@
     </carousel>
     <Main :mainInfos="mainInfos" />
     <OurClass :cards="cards" />
+    <OurStaff />
   </div>
 </template>
 
@@ -22,6 +23,7 @@ import Carousel from "./components/Carousel.vue";
 import CarouselSlide from "./components/CarouselSlide.vue";
 import Main from "./components/Main.vue";
 import OurClass from "./components/OurClass.vue";
+import OurStaff from "./components/OurStaff.vue";
 /* import Footer from "./components/Footer.vue.vue" */
 
 export default {
@@ -144,6 +146,12 @@ export default {
           gallery: require("./assets/images/gallery_04.jpg"),
         },
       ],
+      teachers: [
+        {
+          name: " Ruth Richie ",
+          role: "Teacher",
+        },
+      ],
     };
   },
   computed: {
@@ -174,6 +182,7 @@ export default {
     CarouselSlide,
     Main,
     OurClass,
+    OurStaff,
   },
 };
 </script>
