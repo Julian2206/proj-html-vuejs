@@ -45,15 +45,55 @@
             quidem quod laboriosam eligendi. Neque atque magni inventore odit
             natus repudiandae libero! Laboriosam!
           </p>
-          <ul>
-            <li>Comprehensive reporting on individual achievment</li>
-            <li>Comprehensive reporting on individual achievment</li>
-            <li>Comprehensive reporting on individual achievment</li>
-            <li>Comprehensive reporting on individual achievment</li>
-            <li>Comprehensive reporting on individual achievment</li>
-            <li>Comprehensive reporting on individual achievment</li>
+          <ul class="ourclass-rightfooterlist">
+            <li>
+              <img src="../assets/images/style_1.png" alt="" />
+              <p>Comprehensive reporting on individual achievment</p>
+            </li>
+            <li>
+              <img src="../assets/images/style_1.png" alt="" />
+              <p>Comprehensive reporting on individual achievment</p>
+            </li>
+            <li>
+              <img src="../assets/images/style_1.png" alt="" />
+              <p>Comprehensive reporting on individual achievment</p>
+            </li>
+            <li>
+              <img src="../assets/images/style_1.png" alt="" />
+              <p>Comprehensive reporting on individual achievment</p>
+            </li>
+            <li>
+              <img src="../assets/images/style_1.png" alt="" />
+              <p>Comprehensive reporting on individual achievment</p>
+            </li>
+            <li>
+              <img src="../assets/images/style_1.png" alt="" />
+              <p>Comprehensive reporting on individual achievment</p>
+            </li>
           </ul>
         </div>
+
+        <div class="ourclass-left-footer">
+          <ul>
+            <li v-for="(card, i) in cards" :key="i">
+              <!-- todo set different color -->
+              <img class="main-logo" v-bind:src="card.logo" />
+              <h3>{{ card.title }}</h3>
+              <p>{{ card.description }}</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="gallery-container">
+        <div v-for="(card, i) in cards" :key="i">
+          <img :src="card.gallery" alt="" />
+        </div>
+      </div>
+
+      <div class="galleryInfo">
+        <h2>See Our Kindergarten Photo Gallery</h2>
+        <button>viev Gallery</button>
       </div>
     </div>
   </section>
@@ -84,7 +124,7 @@ export default {
   font-size: 18px;
   margin-bottom: 10px;
 }
-.ourclass-header img {
+.ourclass-header > img {
   margin-bottom: 40px;
 }
 .ourclass-info {
@@ -108,7 +148,8 @@ export default {
 
 /* cards */
 .card-container {
-  max-width: 100%;
+  margin: 0 auto;
+  max-width: 50%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -145,13 +186,90 @@ export default {
 }
 /* footer-section  */
 .ourclass-footer {
-  background-color: #e8e6e7;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e8e6e7;
   height: auto;
 }
 .ourclass-right-footer {
-  width: calc(80% / 2);
   text-align: left;
   overflow: hidden;
+}
+.ourclass-right-footer h4 {
+  width: 60%;
+  font-size: 25px;
+  color: #554e9e;
+  margin-left: 160px;
+  margin-top: 40px;
+}
+.ourclass-right-footer p {
+  width: 60%;
+  font-size: 18px;
+  color: grey;
+  margin-left: 160px;
+  margin-top: 20px;
+}
+.ourclass-rightfooterlist li {
+  display: flex;
+  justify-content: center;
+  margin: 20px 20px 20px 40px;
+}
+.ourclass-rightfooterlist li img {
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.ourclass-left-footer {
+  width: calc(100% / 2);
+  height: auto;
+}
+.ourclass-left-footer ul {
+  list-style: none;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 50%;
+}
+.ourclass-left-footer ul li {
+  padding: 30px;
+}
+
+.gallery-container {
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.gallery-container > div {
+  width: 100%;
+  height: auto;
+}
+
+.galleryInfo {
+  background-image: url("../assets/images/pattern.png");
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+}
+.galleryInfo h2 {
+  color: #fff;
+  font-size: 30px;
+}
+.galleryInfo button {
+  height: 40px;
+  width: 100px;
+  font-size: 14px;
+  background-color: #554e9e;
+  color: #fff;
+  border: 1px solid #fff;
+}
+.galleryInfo button:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: black;
 }
 </style>
